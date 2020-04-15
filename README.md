@@ -4,6 +4,10 @@ Coming soon
 
 <!---
 
+[![CI](https://github.com/adobe/cordova-acpgriffon/workflows/CI/badge.svg)](https://github.com/adobe/cordova-acpgriffon/actions)
+[![npm](https://img.shields.io/npm/v/@adobe/cordova-acpgriffon)](https://www.npmjs.com/package/@adobe/cordova-acpgriffon)
+[![GitHub](https://img.shields.io/github/license/adobe/cordova-acpgriffon)](https://github.com/adobe/cordova-acpgriffon/blob/master/LICENSE)
+
 - [Prerequisites](#prerequisites)  
 - [Using the Plugin](#using-the-plugin)  
 - [Running Test](#running-tests)
