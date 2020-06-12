@@ -8,6 +8,7 @@
 - [Usage](#usage)
 - [Running Tests](#running-tests)
 - [Sample App](#sample-app)
+- [Additional Cordova Plugins](#additional-cordova-plugins)
 - [Contributing](#contributing)
 - [Licensing](#licensing)
 
