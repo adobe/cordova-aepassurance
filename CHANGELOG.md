@@ -1,4 +1,4 @@
-### 0.0.1 (5 Nov, 2020)
+### 0.0.2 (5 Nov, 2020)
 - Updated Griffon iOS and Android to version 1.2.1
 
 ### 0.0.1 (21 Apr, 2020)
