@@ -1,7 +1,7 @@
-# Adobe Experience Platform - Griffon plugin for Cordova apps
-[![CI](https://github.com/adobe/cordova-acpgriffon/workflows/CI/badge.svg)](https://github.com/adobe/cordova-acpgriffon/actions)
-[![npm](https://img.shields.io/npm/v/@adobe/cordova-acpgriffon)](https://www.npmjs.com/package/@adobe/cordova-acpgriffon)
-[![GitHub](https://img.shields.io/github/license/adobe/cordova-acpgriffon)](https://github.com/adobe/cordova-acpgriffon/blob/main/LICENSE)
+# Adobe Experience Platform - Assurance plugin for Cordova apps
+[![CI](https://github.com/adobe/cordova-aepassurance/workflows/CI/badge.svg)](https://github.com/adobe/cordova-aepassurance/actions)
+[![npm](https://img.shields.io/npm/v/@adobe/cordova-aepassurance)](https://www.npmjs.com/package/@adobe/cordova-aepassurance)
+[![GitHub](https://img.shields.io/github/license/adobe/cordova-aepassurance)](https://github.com/adobe/cordova-aepassurance/blob/main/LICENSE)
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -27,16 +27,16 @@ sudo npm install -g cordova
 
 To start using the AEP SDK for Cordova, navigate to the directory of your Cordova app and install the plugin:
 ```
-cordova plugin add https://github.com/adobe/cordova-acpgriffon.git
+cordova plugin add https://github.com/adobe/cordova-aepassurance.git
 ```
 Check out the documentation for help with APIs
 
 ## Usage
-### [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+### [Assurance](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-experience-platform-assurance)
 
 ##### Getting the SDK version:
 ```js
-ACPGriffon.extensionVersion(function(version){  
+AEPAssurance.extensionVersion(function(version){  
   console.log(version);
 }, function(error){  
   console.log(error);  
@@ -47,18 +47,18 @@ ACPGriffon.extensionVersion(function(version){
 > Note: It is required to initialize the SDK via native code inside your AppDelegate and MainApplication for iOS and Android respectively. For more information see how to initialize [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon/set-up-project-griffon#add-project-griffon-extension-to-your-app).
 #####  **iOS**
 ```objective-c
-#import "ACPGriffon.h"  
-[ACPGriffon registerExtension];
+#import "AEPAssurance.h"  
+[AEPAssurance registerExtension];
 ```
 #####  **Android:**
 ```java
-import com.adobe.marketing.mobile.Griffon;
-Griffon.registerExtension();
+import com.adobe.marketing.mobile.Assurance;
+Assurance.registerExtension();
 ```
-##### Starting the Griffon session:
+##### Starting the Assurance session:
 ```js
-ACPGriffon.startSession(url, function(response) {  
-  console.log("Success in starting Griffon session");  
+AEPAssurance.startSession(url, function(response) {  
+  console.log("Success in starting AEPAssurance session");  
 }, function(error){  
   console.log(error);  
 });

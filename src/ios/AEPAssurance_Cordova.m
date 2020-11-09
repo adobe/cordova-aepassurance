@@ -9,32 +9,32 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/********* ACPGriffon_Cordova.m Cordova Plugin Implementation *******/
+/********* AEPAssurance_Cordova.m Cordova Plugin Implementation *******/
 
 #import <Cordova/CDV.h>
-#import <ACPGriffon/ACPGriffon.h>
+#import <AEPAssurance/AEPAssurance.h>
 
-@interface ACPGriffon_Cordova : CDVPlugin
+@interface AEPAssurance_Cordova : CDVPlugin
 
 - (void)extensionVersion:(CDVInvokedUrlCommand*)command;
 - (void)startSession:(CDVInvokedUrlCommand*)command;
 
 @end
 
-@implementation ACPGriffon_Cordova
+@implementation AEPAssurance_Cordova
 
 - (void)extensionVersion:(CDVInvokedUrlCommand*)command
 {
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult = nil;
-        NSString* extensionVersion = [ACPGriffon extensionVersion];
+        NSString* extensionVersion = [AEPAssurance extensionVersion];
 
         if (extensionVersion != nil && [extensionVersion length] > 0) {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:extensionVersion];
         } else {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
         }
-        
+
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
 }
@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
 {
     [self.commandDelegate runInBackground:^{
         NSURL* url = [NSURL URLWithString:[command.arguments objectAtIndex:0]];
-        [ACPGriffon startSession:url];
+        [AEPAssurance startSession:url];
         [self.commandDelegate sendPluginResult:nil callbackId:command.callbackId];
     }];
 }

@@ -1,9 +1,9 @@
 {
-  "name": "cordova-acpgriffon-tests",
+  "name": "cordova-aepassurance-tests",
   "version": "0.0.2",
   "description": "",
   "cordova": {
-    "id": "cordova-acpgriffon-tests",
+    "id": "cordova-aepassurance-tests",
     "platforms": []
   },
   "author": "Adobe",

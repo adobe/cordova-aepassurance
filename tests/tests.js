@@ -10,48 +10,48 @@
  */
 
 exports.defineAutoTests = function () {
-    describe('(ACPGriffon.extensionVersion)', function () {
+    describe('(AEPAssurance.extensionVersion)', function () {
         beforeEach(function() {
             spyOn(console, 'log');
         })
         it('should exist', function () {
-            expect(ACPGriffon.extensionVersion).toBeDefined();
+            expect(AEPAssurance.extensionVersion).toBeDefined();
         });
         it('should be a function', function () {
-            expect(typeof ACPGriffon.extensionVersion === "function").toBe(true);
+            expect(typeof AEPAssurance.extensionVersion === "function").toBe(true);
         });
         it('should print log to console stating success is not function', function() {
-            ACPGriffon.extensionVersion("url", "success", function() {})
+            AEPAssurance.extensionVersion("url", "success", function() {})
             expect(console.log).toHaveBeenCalled();
         });
         it('should print log to console stating error is not function', function() {
-            ACPGriffon.extensionVersion(function() {}, "error")
+            AEPAssurance.extensionVersion(function() {}, "error")
             expect(console.log).toHaveBeenCalled();
         });
         it('check if the result is a string', function (done) {
-            ACPGriffon.extensionVersion(function(result) {
+            AEPAssurance.extensionVersion(function(result) {
                 expect(typeof result === "string").toBe(true);
                 done();
             }, function() {});
         });
     });
 
-    describe('(ACPGriffon.startSession)', function() {
+    describe('(AEPAssurance.startSession)', function() {
         beforeEach(function() {
             spyOn(console, 'log');
         })
         it('should exist', function () {
-            expect(ACPGriffon.extensionVersion).toBeDefined();
+            expect(AEPAssurance.extensionVersion).toBeDefined();
         });
         it('should be a function', function () {
-            expect(typeof ACPGriffon.extensionVersion === "function").toBe(true);
+            expect(typeof AEPAssurance.extensionVersion === "function").toBe(true);
         });
         it('should print log to console stating success is not function', function() {
-            ACPGriffon.startSession("url", "success", function() {})
+            AEPAssurance.startSession("url", "success", function() {})
             expect(console.log).toHaveBeenCalled();
         });
         it('should print log to console stating error is not function', function() {
-            ACPGriffon.startSession("url", function() {}, "error")
+            AEPAssurance.startSession("url", function() {}, "error")
             expect(console.log).toHaveBeenCalled();
         });
     });
