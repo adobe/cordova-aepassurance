@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-acpgriffon"
-        version="0.0.1"
+        version="0.0.2"
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-acpgriffon</name>
@@ -48,7 +48,7 @@
                 <source url="https://github.com/CocoaPods/Specs.git" />
             </config>
             <pods use-frameworks="true">
-                <pod name="ACPGriffon" spec=">= 1.1.0" />
+                <pod name="ACPGriffon" spec=">= 1.2.1" />
             </pods>
         </podspec>
     </platform>
