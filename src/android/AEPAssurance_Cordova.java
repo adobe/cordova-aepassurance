@@ -17,12 +17,12 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.adobe.marketing.mobile.Griffon;
+import com.adobe.marketing.mobile.Assurance;
 
 /**
- * Griffon Android Cordova implementation
+ * AEPAssurance Android Cordova implementation
  */
-public class ACPGriffon_Cordova extends CordovaPlugin {
+public class AEPAssurance_Cordova extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -41,7 +41,7 @@ public class ACPGriffon_Cordova extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             @Override
             public void run() {
-                String extensionVersion = Griffon.extensionVersion();
+                String extensionVersion = Assurance.extensionVersion();
                 if (extensionVersion.length() > 0) {
                     callbackContext.success(extensionVersion);
                 } else {
@@ -66,7 +66,7 @@ public class ACPGriffon_Cordova extends CordovaPlugin {
                     callbackContext.error("Error while parsing arguments, Error " + e.getLocalizedMessage());
                     return;
                 }
-                Griffon.startSession(url);
+                Assurance.startSession(url);
             }
         });
     }

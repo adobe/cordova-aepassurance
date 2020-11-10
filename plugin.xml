@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-acpgriffon"
-        version="0.0.2"
+<plugin id="cordova-aepassurance"
+        version="0.0.1"
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>cordova-acpgriffon</name>
-    <description>ACPGriffon Plugin for Cordova</description>
+    <name>cordova-aepassurance</name>
+    <description>AEPAssurance Plugin for Cordova</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,adobe,griffon,acpgriffon,marketing</keywords>
+    <keywords>cordova,adobe,assurance,aepassurance,griffon,acpgriffon,marketing</keywords>
 
-    <!-- use "ACPGriffon" to access the plugin APIs in javascript -->
-    <js-module name="cordova-acpgriffon" src="www/ACPGriffon.js">
-        <clobbers target="ACPGriffon" />
+    <!-- use "AEPAssurance" to access the plugin APIs in javascript -->
+    <js-module name="cordova-aepassurance" src="www/AEPAssurance.js">
+        <clobbers target="AEPAssurance" />
     </js-module>
 
     <!-- dependency on ACPCore plugin -->
@@ -19,36 +19,36 @@
     <!--configure android platform -->
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="ACPGriffon_Cordova">
-                <param name="android-package" value="com.adobe.marketing.mobile.cordova.ACPGriffon_Cordova" />
+            <feature name="AEPAssurance_Cordova">
+                <param name="android-package" value="com.adobe.marketing.mobile.cordova.AEPAssurance_Cordova" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <!-- plugin source -->
-        <source-file src="src/android/ACPGriffon_Cordova.java"
+        <source-file src="src/android/AEPAssurance_Cordova.java"
                      target-dir="src/com/adobe/marketing/mobile/cordova" />
         <!-- dependencies managed through included gradle file -->
-        <framework custom="true" src="src/android/ACPGriffon_Cordova.gradle" type="gradleReference" />
+        <framework custom="true" src="src/android/AEPAssurance_Cordova.gradle" type="gradleReference" />
     </platform>
 
     <!-- configure ios platform -->
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
-            <feature name="ACPGriffon_Cordova">
-                <param name="ios-package" value="ACPGriffon_Cordova" />
+            <feature name="AEPAssurance_Cordova">
+                <param name="ios-package" value="AEPAssurance_Cordova" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
         <!-- plugin source -->
-        <source-file src="src/ios/ACPGriffon_Cordova.m" />
+        <source-file src="src/ios/AEPAssurance_Cordova.m" />
         <!-- sdk source for ios managed by cocoapods -->
         <podspec>
             <config>
                 <source url="https://github.com/CocoaPods/Specs.git" />
             </config>
             <pods use-frameworks="true">
-                <pod name="ACPGriffon" spec=">= 1.2.1" />
+                <pod name="AEPAssurance" spec=">= 1.0.0" />
             </pods>
         </podspec>
     </platform>

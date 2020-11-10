@@ -2,16 +2,16 @@ name: npm-publish
 on:
   push:
     branches:
-      - main 
+      - main
 jobs:
   npm-publish:
     name: npm-publish
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@master
+      uses: actions/checkout@main
     - name: Set up Node.js
-      uses: actions/setup-node@master
+      uses: actions/setup-node@main
       with:
         node-version: 10.0.0
     - name: Publish if version has been updated
@@ -25,4 +25,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
         NPM_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
         NPM_AUTH: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} # This will be shared with your repo as an org secret
-

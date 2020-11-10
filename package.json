@@ -1,9 +1,9 @@
 {
-  "name": "@adobe/cordova-acpgriffon",
-  "version": "0.0.2",
+  "name": "@adobe/cordova-aepassurance",
+  "version": "0.0.1",
   "description": "Adobe Experience Platform - Project Griffon plugin for Cordova apps.",
   "cordova": {
-    "id": "cordova-acpgriffon",
+    "id": "cordova-aepassurance",
     "platforms": [
       "ios",
       "android"
@@ -11,10 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/cordova-acpgriffon"
+    "url": "https://github.com/adobe/cordova-aepassurance"
   },
   "keywords": [
     "adobe",
+    "aepassurance",
+    "assurance",
     "griffon",
     "acpgriffon",
     "debugging",

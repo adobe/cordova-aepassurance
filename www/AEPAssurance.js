@@ -9,16 +9,16 @@
  governing permissions and limitations under the License.
  */
 
-var ACPGriffon = (function() {
+var AEPAssurance = (function() {
     var exec = require('cordova/exec');
-	var ACPGriffon = (typeof exports !== 'undefined') && exports || {};
-	var PLUGIN_NAME = "ACPGriffon_Cordova";
+	var AEPAssurance = (typeof exports !== 'undefined') && exports || {};
+	var PLUGIN_NAME = "AEPAssurance_Cordova";
 	// ===========================================================================
 	// public APIs
 	// ===========================================================================
 
-    // Gets the current Griffon extension version.
-    ACPGriffon.extensionVersion = function (success, error) {
+    // Gets the current AEPAssurance extension version.
+    AEPAssurance.extensionVersion = function (success, error) {
         var FUNCTION_NAME = "extensionVersion";
 
         if (success && !isFunction(success)) {
@@ -34,8 +34,8 @@ var ACPGriffon = (function() {
         exec(success, error, PLUGIN_NAME, FUNCTION_NAME, []);
     };
 
-    // Starts Griffon session
-    ACPGriffon.startSession = function (url, success, error) {
+    // Starts AEPAssurance session
+    AEPAssurance.startSession = function (url, success, error) {
         var FUNCTION_NAME = "startSession";
 
         if (success && !isFunction(success)) {
@@ -49,17 +49,17 @@ var ACPGriffon = (function() {
         }
 
         if (!isString(url)) {
-            printNotAString("griffonSessionUrl", FUNCTION_NAME);
+            printNotAString("assuranceSessionUrl", FUNCTION_NAME);
             return;
-        }	
+        }
 
         exec(success, error, PLUGIN_NAME, FUNCTION_NAME, [url]);
-    }; 
+    };
 
-    return ACPGriffon;
+    return AEPAssurance;
 }());
 
-module.exports = ACPGriffon;
+module.exports = AEPAssurance;
 
 // ===========================================================================
 // input sanitization
