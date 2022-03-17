@@ -20,7 +20,7 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-aepassurance-tests"
-    version="0.0.1">
+    version="1.0.0">
     <name>Cordova Adobe AEPAssurance Plugin Tests</name>
     <license>Apache 2.0</license>
 
